@@ -1,6 +1,6 @@
 function spinalCase(str) {
   
- //Adds a "-" in front of uppercase letters
+ //Adds a " " in front of uppercase letters
  for (var letter of str){
    
    if (/[A-Z]/.test(letter)){
