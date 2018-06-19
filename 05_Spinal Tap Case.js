@@ -1,23 +1,16 @@
 function spinalCase(str) {
- 
- //Ajoute un - devant les lettres majuscules (pour les mots colles)
- for (letter of str){
+  
+ //Adds a "-" in front of uppercase letters
+ for (var letter of str){
    
    if (/[A-Z]/.test(letter)){
      str=str.slice(0,str.indexOf(letter)).toLowerCase()
-     +"-"+str.slice(str.indexOf(letter))}}
-     
-str=str.replace((/\W+/),"-")
-console.log(str)
-  
-  
-     
-     
+     +" "+str.slice(str.indexOf(letter))}}
 
-   
- 
- 
-  return str;
+//Replaces all consecutive non letter character with -
+str=str.trim().replace(/[\W|_]+/g,"-")
+
+  return str.toLowerCase();
 }
 
-spinalCase("This IsSpinalTap");
+console.log(spinalCase("This      IsSpinal_Tap"));
