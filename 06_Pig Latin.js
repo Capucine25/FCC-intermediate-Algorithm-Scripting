@@ -6,7 +6,7 @@ function translatePigLatin(str) {
     
  //Word starts with a consonant
   else if (/^[^aeiou]+/.test(str))
-    {return str.replace(/(^[^aeiou]+)([A-Z]+)/i, '$2$1')+"ay";}
+    {return str.replace(/(^[^aeiou]+)([A-Z]+)/i, '$2$1ay');}
   
   //Word starts with a vowel
   else
